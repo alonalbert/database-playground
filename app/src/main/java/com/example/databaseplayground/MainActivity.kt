@@ -13,34 +13,34 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.databaseplayground.ui.theme.DatabasePlaygroundTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            DatabasePlaygroundTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    App()
-                }
-            }
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContent {
+      DatabasePlaygroundTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(
+          modifier = Modifier.fillMaxSize(),
+          color = MaterialTheme.colorScheme.background
+        ) {
+          App()
         }
+      }
     }
+  }
 
-    @Composable
-    fun App(modifier: Modifier = Modifier) {
-        Text(
-            text = "Hello",
-            modifier = modifier
-        )
-    }
+  @Composable
+  fun App(modifier: Modifier = Modifier) {
+    Text(
+      text = "Hello",
+      modifier = modifier
+    )
+  }
 
-    @Preview(showBackground = true)
-    @Composable
-    fun GreetingPreview() {
-        DatabasePlaygroundTheme {
-            App()
-        }
+  @Preview(showBackground = true)
+  @Composable
+  fun GreetingPreview() {
+    DatabasePlaygroundTheme {
+      App()
     }
+  }
 }
